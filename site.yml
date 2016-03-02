@@ -4,5 +4,6 @@
 
   tasks:
   - name: instal jq
+    become: yes
     apt: name=jq update_cache=no force=yes
 
