@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  gather_facts: yes
+
+  tasks:
+  - name: instal jq
+    apt: name=jq update_cache=no force=yes
+
