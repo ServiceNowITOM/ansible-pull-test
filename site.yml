@@ -9,5 +9,7 @@
 
   - name: install wget
     sudo: yes
-    apt: name=wget update_cache=no force=yes
+    apt: name=wget update_cache=no force=yes state=absent
+
+
 
