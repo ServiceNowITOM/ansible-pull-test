@@ -3,13 +3,13 @@
   gather_facts: yes
 
   tasks:
-  - name: instal jq
+  - name: install jq
     sudo: yes
-    apt: name=jq update_cache=no force=yes
+    apt: name=jq update_cache=yes force=yes
 
   - name: install wget
     sudo: yes
-    apt: name=wget update_cache=no force=yes state=absent
+    apt: name=wget update_cache=no force=yes 
 
 
 
