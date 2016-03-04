@@ -11,5 +11,9 @@
     sudo: yes
     apt: name=wget update_cache=no force=yes 
 
+  - name: install nginx 
+    sudo: yes
+    apt: name=nginx update_cache=no force=yes
+
 
 
