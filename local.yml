@@ -12,7 +12,7 @@
   - name: install nginx on centos
     become: yes
     yum: name=nginx state=latest
-    when: ansible_pkg_mgr == 'apt'  
+    when: ansible_pkg_mgr == 'yum'  
 
 
 
