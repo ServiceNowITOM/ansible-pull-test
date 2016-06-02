@@ -3,17 +3,16 @@
   gather_facts: yes
 
   tasks:
-  - name: install jq
-    sudo: yes
-    apt: name=jq update_cache=yes force=yes
 
-  - name: install wget
+  - name: install nginx on ubuntu
     sudo: yes
-    apt: name=wget update_cache=no force=yes 
+    apt: name=nginx update_cache=no force=yes state=latest
+    when: ansible_package_mgr == 'apt'
 
-  - name: install nginx 
+  - name: install nginx on centos
     sudo: yes
-    apt: name=nginx update_cache=no force=yes
+    yum: name=nginx state=latest
+    when: ansible_package_mgr == 'apt'  
 
 
 
