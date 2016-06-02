@@ -5,14 +5,14 @@
   tasks:
 
   - name: install nginx on ubuntu
-    sudo: yes
+    become: yes
     apt: name=nginx update_cache=no force=yes state=latest
-    when: ansible_package_mgr == 'apt'
+    when: ansible_pkg_mgr == 'apt'
 
   - name: install nginx on centos
-    sudo: yes
+    become: yes
     yum: name=nginx state=latest
-    when: ansible_package_mgr == 'apt'  
+    when: ansible_pkg_mgr == 'apt'  
 
 
 
