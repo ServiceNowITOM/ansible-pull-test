@@ -14,5 +14,7 @@
     yum: name=nginx state=latest
     when: ansible_pkg_mgr == 'yum'  
 
-
+  - name: set last run file
+    become: yes
+    shell: date > /tmp/last_ansible_run
 
